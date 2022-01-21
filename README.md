@@ -1,7 +1,7 @@
 # Portifolio De Exercicios Trybe :four_leaf_clover:
 ## Aqui se encontram todos os exercicio e projetos realizado  no curso !
 
->Este Repositório contém todas as atividas desenvolvidas por [Leonardo Ferraz](https://www.linkedin.com/in/leonardo-ferraz-149480228) enquanto estudava na [Trybe](https://www.betrybe.com/). :rocket:
+>Este Repositório contém todas as atividas desenvolvidas por mim [Leonardo Ferraz](https://www.linkedin.com/in/leonardo-ferraz-149480228) enquanto estudava na [Trybe](https://www.betrybe.com/). :rocket:
  
  *A Trybe é uma escola do futuro para qualquer pessoa que querira melhorar de vida e construir uma carreira de sucesso em tecnologia!
  
