@@ -1,0 +1,46 @@
+body{
+    background-image: url(bgmario.jpg) ;
+    background-position: center;
+}
+
+img{
+    object-fit: cover;
+}
+h1{
+    text-align: center;
+    
+}
+.super-mario{
+    width: 200px;
+    position: absolute;
+    left: 8rem;
+
+  }
+  
+.goomba{
+    width: 100px;
+   position: absolute;
+   top: 24rem;
+   left: 20rem;
+  }
+  
+.baloon{
+    position: absolute;
+    top: 10rem;
+    left: 34rem;
+}
+  
+.speach{
+    font-size: 25px;
+    position: absolute;
+    top: 13rem;
+    left: 35rem;
+    z-index: 1;
+}
+  
+.bowser{
+    width: 400px;
+    position: absolute;
+    left: 50rem;
+    top: 13rem;
+}
