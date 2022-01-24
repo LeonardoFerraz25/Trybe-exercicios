@@ -1,6 +1,3 @@
-
-# trybe-exercicios
-
 # Portifolio De Exercicios Trybe :four_leaf_clover:
 ## Aqui se encontram todos os exercicio e projetos realizado  no curso !
 
