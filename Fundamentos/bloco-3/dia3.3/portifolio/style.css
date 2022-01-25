@@ -1,0 +1,57 @@
+Body{
+    background-image: linear-gradient(to bottom, #242424e3 60%, transparent);
+    background-size: cover;
+}
+.titulo{
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    font-size: 2.5rem;
+    border-bottom: 1px solid orangered ;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
+}
+
+.sobre{
+    
+    height: 20rem;
+}
+.sobre p{
+    padding-top: 3rem;
+    padding-left: 30rem;
+    color: #eee;
+    text-shadow: 5px 5px 10px black;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#img-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 320px;
+    height: 320px;
+    background-color: orangered;
+    border-radius: 50rem;
+}
+#img-wrapper img{
+    width: 300px;
+}
+#local{
+    color: #eee;
+    text-shadow:  5px 5px 5px black;
+    text-decoration: underline;
+}
+.skill{
+    background-color: rgba(238, 238, 238, 0.596);
+    width: 700px;
+    font-size: 2rem;
+    margin-left: 20rem;
+    padding: 1.5em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.507),
+    10px 10px 10px rgba(0, 0, 0, 0.507), 10px 10px 10px rgba(0, 0, 0, 0.507), 10px 10px 10px rgba(0, 0, 0, 0.507)
+    ;
+
+}  
+li:hover{
+    background-color: orangered;
+}
