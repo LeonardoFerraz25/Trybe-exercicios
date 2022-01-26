@@ -109,7 +109,7 @@ p{
 
 .tabela{
     background-color: var(--cor02);
-    width: 70%;
+    width: 50%;
     margin: auto;
     padding: 2rem;
     border-radius: 10px;
@@ -136,7 +136,8 @@ table td{
     padding: 1rem;
 }
 .fontes a{
-    color: #eee;
+    color: #242424;
+    text-shadow: 2px 2px 5px white;
 
 }
 .fontes a:hover{
