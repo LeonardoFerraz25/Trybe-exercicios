@@ -1,6 +1,6 @@
-Body{
-    background-image: linear-gradient(to bottom, #242424e3 60%, transparent);
-    background-size: cover;
+*{
+    margin: 0;
+    padding: 0;
 }
 .titulo{
     text-align: center;
@@ -9,6 +9,8 @@ Body{
     font-size: 2.5rem;
     border-bottom: 1px solid orangered ;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
+    background-color: #242424;
+    background-size: cover;
 }
 
 .sobre{
@@ -18,11 +20,12 @@ Body{
 .sobre p{
     padding-top: 3rem;
     padding-left: 30rem;
-    color: #eee;
+    color: #242424;
     text-shadow: 5px 5px 10px black;
     font-size: 1.5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 #img-wrapper{
     display: flex;
     align-items: center;
@@ -32,26 +35,50 @@ Body{
     height: 320px;
     background-color: orangered;
     border-radius: 50rem;
+    margin: 2rem;
+    
 }
 #img-wrapper img{
     width: 300px;
 }
-#local{
-    color: #eee;
+.sobre #local p{
+    color: #242424;
     text-shadow:  5px 5px 5px black;
     text-decoration: underline;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    
 }
 .skill{
-    background-color: rgba(238, 238, 238, 0.596);
-    width: 700px;
+    background-color: #242424;
+    color: #eee;
+    width: 780px;
     font-size: 2rem;
-    margin-left: 20rem;
+    margin: auto ;
     padding: 1.5em;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.507),
     10px 10px 10px rgba(0, 0, 0, 0.507), 10px 10px 10px rgba(0, 0, 0, 0.507), 10px 10px 10px rgba(0, 0, 0, 0.507)
     ;
 
 }  
+.skill h1{
+    text-align: center;
+}
 li:hover{
     background-color: orangered;
+}
+
+footer{
+    text-align: center;
+    color: #eee;
+    background-color: #242424;
+    font-size: 1.5rem;
+}
+footer a{
+    color: orangered;
+}
+
+#habilidades{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
