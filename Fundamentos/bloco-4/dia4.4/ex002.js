@@ -1,3 +1,4 @@
+//função que verifica se a palavra é um palindromo
 
 function verificaPalindrome(param){
 let nome1 = param;
