@@ -17,33 +17,62 @@
         //e adicinei ele como filho do body
       body.appendChild(titulo)
 
+        //cria uma tag main com a class "main-content" dentro do body
       let main = document.createElement("main");
       main.className = "main-content";
       body.appendChild(main);
 
-      
-      let centerContent = document.createElement("section");
-      centerContent.className = "center-content";
-      main.appendChild(centerContent);
+        //essa fução vai receber como parametro a classe e criar uma section com ela
+      function criarSection(classe){
+        let centerContent = document.createElement("section");
+        centerContent.className = classe;
+        return main.appendChild(centerContent);
+      }
+      //as chamadas da função com as class declaradas dentro do parametro
+      criarSection("center-content")
+      criarSection("left-content")
+      criarSection("right-content")
 
+      //cria um paragrafo dentro da section center-content
       let p = document.createElement("p");
       p.innerHTML = "Hello word !";
+      let centerContent = document.querySelector(".center-content");
       centerContent.appendChild(p);
 
-      let leftContent = document.createElement("section");
-      leftContent.className = "left-content";
-      main.appendChild(leftContent);
-
-      let rigthContent = document.createElement("section");
-      rigthContent.className = "right-content";
-      main.appendChild(rigthContent);
-
+        //cria um elemento de imagem dentro da section left-content 
       let img = document.createElement("img");
-      img.src = "src=https://picsum.photos/200"
+      img.src = "https://picsum.photos/200"
       img.className = "small-image";
+      let leftContent = document.querySelector(".left-content")
       leftContent.appendChild(img);
 
+      //cria uma lista não ordenadenada
+      let lista = document.createElement("ul");
+      lista.className = "listaUl"
+      let rigthContent =document.querySelector(".right-content");
+      rigthContent.appendChild(lista);
 
-    </script>
+      //essa fução cria um elento <li> com o parametro recebido dentro de um array e injeta dentro do elemento ul 
+      function criarli(array) {
+        for (let i = 0; i < array.length; i++){
+          let item = document.createElement("li");
+          item.innerHTML = array[i];
+          lista.appendChild(item)
+        } 
+      }
+      criarli(["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]);
+
+      //cria um elemento h3 recebendo um texto como parametro  
+      function criarh3(text){
+        let subtitle = document.createElement("h3");
+        subtitle.innerHTML = text;
+       return main.appendChild(subtitle);
+      }
+      criarh3("teste")
+      criarh3("teste")
+      criarh3("teste")
+      
+
+     </script>
   </body>
 </html>
