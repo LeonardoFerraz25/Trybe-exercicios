@@ -13,13 +13,14 @@
         //criei o elemento titulo com um h1
       let titulo = document.createElement("h1")
       titulo.innerHTML = "Exercício 5.2 - JavaScript DOM";
-      titulo.className = "titulo";
+      titulo.className = "title";
         //e adicinei ele como filho do body
       body.appendChild(titulo)
 
         //cria uma tag main com a class "main-content" dentro do body
       let main = document.createElement("main");
       main.className = "main-content";
+      main.style.backgroundColor = "green"
       body.appendChild(main);
 
         //essa fução vai receber como parametro a classe e criar uma section com ela
@@ -38,19 +39,24 @@
       p.innerHTML = "Hello word !";
       let centerContent = document.querySelector(".center-content");
       centerContent.appendChild(p);
+      
 
         //cria um elemento de imagem dentro da section left-content 
       let img = document.createElement("img");
       img.src = "https://picsum.photos/200"
       img.className = "small-image";
+
       let leftContent = document.querySelector(".left-content")
       leftContent.appendChild(img);
+      leftContent.style.margin = "auto";
+      leftContent.style.backgroundColor = "grey"
 
       //cria uma lista não ordenadenada
       let lista = document.createElement("ul");
       lista.className = "listaUl"
       let rigthContent =document.querySelector(".right-content");
       rigthContent.appendChild(lista);
+      rigthContent.style.marginRight = "auto"; 
 
       //essa fução cria um elento <li> com o parametro recebido dentro de um array e injeta dentro do elemento ul 
       function criarli(array) {
@@ -63,15 +69,23 @@
       criarli(["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]);
 
       //cria um elemento h3 recebendo um texto como parametro  
-      function criarh3(text){
+      function criarh3(text, classe){
         let subtitle = document.createElement("h3");
         subtitle.innerHTML = text;
+        subtitle.className = classe;
        return main.appendChild(subtitle);
       }
-      criarh3("teste")
-      criarh3("teste")
-      criarh3("teste")
+      criarh3("teste", "description")
+      criarh3("teste2", "description")
+      criarh3("teste3", "description")
       
+      
+      //remove o ultima filho do elemento ul no caso uma li
+      let lastChild = document.querySelector(".listaUl").lastChild;
+      lista.removeChild(lastChild)
+      //remove mais um elemento do final do ul
+      let lastChild2 = document.querySelector(".listaUl").lastChild;
+      lista.removeChild(lastChild2)
 
      </script>
   </body>
