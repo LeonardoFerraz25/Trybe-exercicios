@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script>
+        //selecineio o elemento body
+      let body = document.querySelector("body");
+        //criei o elemento titulo com um h1
+      let titulo = document.createElement("h1")
+      titulo.innerHTML = "Exercício 5.2 - JavaScript DOM";
+      titulo.className = "titulo";
+        //e adicinei ele como filho do body
+      body.appendChild(titulo)
+
+      let main = document.createElement("main");
+      main.className = "main-content";
+      body.appendChild(main);
+
+      let section = document.createElement("section");
+      section.className = "center-contet"
+      main.appendChild(section);
+
+      let p = document.createElement("p");
+      p.innerHTML = "Hello word !";
+      section.appendChild(p);
+
+      
+
+    </script>
+  </body>
+</html>
