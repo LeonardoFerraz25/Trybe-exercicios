@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscando elementos</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+      <script>
+        //recuperando o elemnto pai
+        let pai = document.querySelector("#pai");
+        // adicionando um elendo filho dentro do pai
+        let elemeto = document.createElement("section")
+        elemeto.innerText = "teste";
+        elemeto.style.backgroundColor = "green"
+        pai.appendChild(elemeto)
+
+        //recuperando elemntoOndeVoceEsta
+        let estouAqui = document.querySelector("#elementoOndeVoceEsta");
+        //criando um elemento irmão
+        let elemeto2 = document.createElement("section")
+        elemeto2.innerText = "Helow Word";
+        elemeto2.style.backgroundColor = "blue"
+        estouAqui.appendChild(elemeto2);
+
+        
+
+        let filhoDoFilho = document.querySelector("#primeiroFilhoDoFilho");
+        
+        let filho2 = document.createElement("section")
+        filho2.innerText = "filhodofilho";
+        filho2.style.backgroundColor = "red"
+        filhoDoFilho.appendChild(filho2);
+
+      </script>
+</body>
+</html>
