@@ -21,15 +21,28 @@
       main.className = "main-content";
       body.appendChild(main);
 
-      let section = document.createElement("section");
-      section.className = "center-contet"
-      main.appendChild(section);
+      
+      let centerContent = document.createElement("section");
+      centerContent.className = "center-content";
+      main.appendChild(centerContent);
 
       let p = document.createElement("p");
       p.innerHTML = "Hello word !";
-      section.appendChild(p);
+      centerContent.appendChild(p);
 
-      
+      let leftContent = document.createElement("section");
+      leftContent.className = "left-content";
+      main.appendChild(leftContent);
+
+      let rigthContent = document.createElement("section");
+      rigthContent.className = "right-content";
+      main.appendChild(rigthContent);
+
+      let img = document.createElement("img");
+      img.src = "src=https://picsum.photos/200"
+      img.className = "small-image";
+      leftContent.appendChild(img);
+
 
     </script>
   </body>
