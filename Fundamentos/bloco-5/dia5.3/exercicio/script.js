@@ -158,7 +158,20 @@ for (let n = 0; n < numeros.length; n++) {
 
 const input = document.querySelector('#task-input');
 const adicionar = document.querySelector('#btn-add');
+const listaCompro = document.querySelector('.task-list')
 
 adicionar.addEventListener('click', function (){
-    
+    const compromisso = document.createElement("li")
+    const texto = input.value;
+    compromisso.innerText = texto;
+    listaCompro.appendChild(compromisso)
+})
+input.addEventListener('keyup', function (e){
+    const key = e.which || e.keyCode;
+    if (key == 13) {
+    const compromisso = document.createElement("li")
+    const texto = input.value;
+    compromisso.innerText = texto;
+    listaCompro.appendChild(compromisso)
+    }
 })
