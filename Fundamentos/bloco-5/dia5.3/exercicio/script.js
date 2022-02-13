@@ -1,42 +1,33 @@
-function createDaysOfTheWeek() {
-    const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
-    const weekDaysList = document.querySelector('.week-days');
-  
-    for (let index = 0; index < weekDays.length; index += 1) {
-      const days = weekDays[index];
-      const dayListItem = document.createElement('li');
-      dayListItem.innerHTML = days;
-  
-      weekDaysList.appendChild(dayListItem);
-    };
-  };
-  
-  createDaysOfTheWeek();
-  
-  // Escreva seu código abaixo.
-  const dias = document.querySelector('#days');
+  const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
 
-  function criarDias() {
-      const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-      
-      for (let i = 0; i < dezDaysList.length; i++) {
-          const item = document.createElement('li');
-          item.innerText = dezDaysList[i];
-          item.className = "day"
-          if (dezDaysList[i] === 24 ||dezDaysList[i] === 31 ) {
-            item.className = "day holiday";
-          } 
-          if(dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18){
-            item.className = "day friday"
-          }
-          if(dezDaysList[i] === 25){
-              item.className = "day friday holiday"
-          }
-          dias.appendChild(item);
-        }
-      
-  }
-  criarDias();
+  const weekDaysList = document.querySelector('.week-days');
+
+  weekDays.forEach((item) => {
+    const dayListItem = document.createElement('li');
+    dayListItem.innerText = item;
+    weekDaysList.appendChild(dayListItem);
+  } )
+  
+  const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
+  const dias = document.querySelector('#days');
+  
+  dezDaysList.forEach((item) => {
+    const diasDoMes = document.createElement('li');
+    diasDoMes.innerText = item;
+    diasDoMes.className = "day"
+    if (item === 24 ||item === 31 ) {
+      diasDoMes.className = "day holiday";
+    } 
+    if(item === 4 || item === 11 || item === 18){
+      diasDoMes.className = "day friday"
+    }
+    if(item === 25){
+        diasDoMes.className = "day friday holiday"
+    }
+    dias.appendChild(diasDoMes);
+  
+  })
 
   const botoes = document.querySelector(".buttons-container");
 
@@ -50,87 +41,81 @@ function createDaysOfTheWeek() {
   criarBtn("Sexta-Feria", "btn-friday");
 
   const feriados = document.querySelector("#btn-holiday");
- 
-  feriados.addEventListener('click', function (event) {
-    const holiday = document.querySelectorAll('.holiday');
-
-    for (let i = 0; i < holiday.length; i++) {
-    
-        if (holiday[i].classList.contains('bgblue')) {
-            holiday[i].classList.remove('bgblue');
+  const holiday = document.querySelectorAll('.holiday');
+  feriados.addEventListener('click', () => {
+      holiday.forEach((item) => {
+        if(item.classList.contains('bgblue')){
+            item.classList.remove('bgblue');
         }else{
-            holiday[i].classList.add('bgblue')
+            item.classList.add('bgblue');
         }
-    }
+      })
   })
-
+  
   const sexta = document.querySelector('#btn-friday');
-
-  sexta.addEventListener('click', function (){
-      const sextou = document.querySelectorAll('.friday');
-
-      for (let i = 0; i < sextou.length; i++) {
-
-          if (sextou[i].classList.contains('sextoou')){
-              sextou[i].classList.remove('sextoou')
+  const sextou = document.querySelectorAll('.friday');
+  sexta.addEventListener('click', () => {
+      sextou.forEach((item) => {
+          if(item.classList.contains('sexxxtou')){
+              item.classList.remove('sexxxtou')
               sextou[0].innerHTML = 4; 
               sextou[1].innerHTML = 11;
               sextou[2].innerHTML = 18;
-              sextou[3]. innerHTML = 25;
+              sextou[3].innerHTML = 25; 
           }else{
-              sextou[i].classList.add('sextoou');
-              sextou[i].innerHTML = "SEXXXTOU !"
+              item.classList.add('sexxxtou')
+              item.innerText = "SEXXXTOU !"
           }
-      }
+      })
   })
 
-const numeros = document.querySelectorAll('.day');
-for (let i = 0; i < numeros.length; i++) {
-    
-    numeros[i].addEventListener('mouseenter', function (event){
-        event.target.style.fontSize = "30px";
+const numerosDoDias = document.querySelectorAll('.day');
+numerosDoDias.forEach((item) => {
+    item.addEventListener('mouseenter', (event) => {
+        event.target.style.fontSize = '40px'
     })
-    numeros[i].addEventListener('mouseout', function (event){
-        event.target.style.fontSize = "16px";
+    item.addEventListener('mouseout', (event) => {
+        event.target.style.fontSize = "20px";
     })
-    
-}
-
-
+})
 
 const tasks = document.querySelector(".my-tasks");
 
-function addTasks(text) {
+const addTasks = (text, cor) => {
     const tarefa = document.createElement('span');
-    tarefa.innerText = text;
-    tasks.appendChild(tarefa);
-    
-}
-addTasks("Importantes")
-
-
-function addCor(cor) {
     const cores = document.createElement('div');
+    const quebra = document.createElement('br');
+    tarefa.innerText = text;
+    tarefa.className = "tarefaTexto"
     cores.className = "task"
     cores.style.backgroundColor = cor ;
+    tasks.appendChild(tarefa);
     tasks.appendChild(cores)
+    tasks.appendChild(quebra)
+
 }
 
-addCor("red");
-addTasks("não tão importantes")
-addCor("blue");
+addTasks("Importantes", "red") 
+addTasks("não tão importantes", "blue")
+addTasks("não tão importantes", "blue")
 
-const select = document.querySelector('.task');
-select.addEventListener('click', function() {
-    
-    if (select.classList.contains('selected')) {
-        select.classList.remove('selected');
-    }else{
-        select.classList.add('selected');
-    }
+
+const select = document.querySelectorAll('.task');
+select.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        const textoDaTarefa = event.target.previousSibling;
+        if (event.target.classList.contains('selected')) {
+            event.target.classList.remove('selected');
+            textoDaTarefa.style.textDecoration = "none";
+            
+        }else{
+            event.target.classList.add('selected');
+            textoDaTarefa.style.textDecoration = "underline";
+        }
+    })
 })
 
-const select2 = tasks.lastElementChild;
+/*const select2 = tasks.lastElementChild;
 select2.addEventListener('click', function (){
 
     if (select2.classList.contains('selected')) {
@@ -140,7 +125,7 @@ select2.addEventListener('click', function (){
     }
 })
 
-for (let n = 0; n < numeros.length; n++) {
+/*for (let n = 0; n < numeros.length; n++) {
     
     numeros[n].addEventListener('click', function (event){
 
@@ -174,4 +159,4 @@ input.addEventListener('keyup', function (e){
     compromisso.innerText = texto;
     listaCompro.appendChild(compromisso)
     }
-})
+}) */
