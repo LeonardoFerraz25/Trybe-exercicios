@@ -97,7 +97,7 @@ const addTasks = (text, cor) => {
 
 addTasks("Importantes", "red") 
 addTasks("não tão importantes", "blue")
-addTasks("não tão importantes", "blue")
+addTasks("outros", "green")
 
 
 const select = document.querySelectorAll('.task');
@@ -115,48 +115,38 @@ select.forEach((item) => {
     })
 })
 
-/*const select2 = tasks.lastElementChild;
-select2.addEventListener('click', function (){
-
-    if (select2.classList.contains('selected')) {
-        select2.classList.remove('selected');
-    }else{
-        select2.classList.add('selected');
-    }
-})
-
-/*for (let n = 0; n < numeros.length; n++) {
-    
-    numeros[n].addEventListener('click', function (event){
-
-        if(select.classList.contains('selected')){
+numerosDoDias.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        if(select[0].classList.contains('selected')){
             event.target.style.color = "red"
-            
-        }else if(select2.classList.contains('selected')){
+        } else if (select[1].classList.contains('selected')) {
             event.target.style.color = "blue"
+        } else if (select[2].classList.contains('selected')) {
+            event.target.style.color = "green"
         }else{
             event.target.style.color = "rgb(119,119,119)"
         }
-            
     })
-}
+});
 
 const input = document.querySelector('#task-input');
 const adicionar = document.querySelector('#btn-add');
 const listaCompro = document.querySelector('.task-list')
 
-adicionar.addEventListener('click', function (){
+adicionar.addEventListener('click', () => {
     const compromisso = document.createElement("li")
     const texto = input.value;
     compromisso.innerText = texto;
+    compromisso.style.textDecoration = "underline";
     listaCompro.appendChild(compromisso)
 })
-input.addEventListener('keyup', function (e){
-    const key = e.which || e.keyCode;
+input.addEventListener('keyup', (event) => {
+    const key = event.which || event.keyCode;
     if (key == 13) {
     const compromisso = document.createElement("li")
     const texto = input.value;
     compromisso.innerText = texto;
+    compromisso.style.textDecoration = "underline";
     listaCompro.appendChild(compromisso)
     }
-}) */
+}) 
