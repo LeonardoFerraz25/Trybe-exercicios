@@ -14,23 +14,29 @@
   <main>
     <form action="">
       <div>
-        <label for="nome">Nome:<input id="nome" type="text" required></label> 
+        <label for="nome">Nome:<input id="nome" type="text" required minlength="10" maxlength="40"></label> 
         <label for="email">Email:<input type="email" name="email" id="email" required></label>
       </div>
       <div>
-        <label for="1"><input type="radio" name="option" id="1">opção 1</label>
-        <label for="2"><input type="radio" name="option" id="2">opção 2</label>
-        <label for="3"><input type="radio" name="option" id="3">opção 3</label>
-        <label for="4"><input type="radio" name="option" id="4">opção 4</label>
+        <label for="1"><input type="radio" name="option" id="1">cidade</label>
+        <label for="2"><input type="radio" name="option" id="2">campo</label>
+        <label for="3"><input type="radio" name="option" id="3">praia</label>
+        <label for="4"><input type="radio" name="option" id="4">montanha</label>
       </div>
-      <div><label for="pq"><p>Porque tenho que ganhar essa viagem :</p> <textarea name="" id="pq" cols="30" rows="10"></textarea></label></div>
-      <label for="data">Data:<input id="data" type="date" ></label>
       <div>
-        <label for="acept1">Concordo 1<input type="checkbox" name="acept" id="acept1"></label>
-        <label for="acept2">Concordo 2<input type="checkbox" name="acept" id="acept2"></label>
+        <label for="pq"><p>Porque tenho que ganhar essa viagem :</p> <textarea name="" id="pq" cols="30" rows="10" maxlength="500"></textarea></label>
       </div>
-      <button type="submit">Enviar</button> <button type="reset">Apagar</button>
+      <div>
+        <p>Qual melhor data para realizar essa viagem :</p>
+        <label for="data">Data:<input id="data" type="date" ></label>
+      </div>
+      <div>
+        <label for="acept1"><input type="checkbox" name="acept" id="acept1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+        <label for="acept2"><input type="checkbox" name="acept" id="acept2" required>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      </div>
+      <button type="submit" id="enviar">Enviar</button> <button type="reset">Apagar</button>
     </form>
   </main>
+  <script src="scrip.js"></script>
 </body>
 </html>
