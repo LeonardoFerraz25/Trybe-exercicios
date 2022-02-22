@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  header h1, h2 {
+    font-size: 30px;
+  }
+  p, li {
+    font-size: 25px;
+    line-height: 2.5rem;
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  header h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #indice {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  #menu {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+  }
+  p  {
+    font-size: 20px;
+    line-height: 2rem;
+  }
+  
+}
+
+@media screen and (min-width: 800px) {
+  header h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #indice {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  #menu {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+  }
+  p  {
+    font-size: 20px;
+    line-height: 2rem;
+  }
+  
+}
