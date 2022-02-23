@@ -23,3 +23,4 @@ const testingScope = (escopo) => {
   }
 }
 testingScope(true);
+testingScope(false);
