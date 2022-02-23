@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clicCount</title>
+  <style>
+    .crash{
+      height: 100vh;
+      background-image: url(Windows_XP_BSOD.png);
+      
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <button id="oi">clica pra ver só</button>
+    <h2 id="counter"></h2>
+  </main>
+
+
+
+
+
+  <script>
+
+
+
+
+    const clique = document.querySelector('#oi');
+    const counter = document.querySelector('#counter');
+    let contador =  0;
+    clique.addEventListener('click', () => {
+      contador += 1;
+      counter.innerText = contador;
+      if (contador == 10) {
+        counter.innerText = 'Para de clicar C$%!@#';
+      } else if (contador == 15) {
+        counter.innerText = 'Mas tu é teimoso emmm já disse pra parar';
+      } else if (contador == 20) {
+        counter.innerText = 'Vai continuar mesmo pera ai !!!!';
+      } else if ( contador == 25) {
+        const main = document.querySelector('main');
+        main.className = "crash"
+        clique.style.display = 'none';
+        
+      }
+
+    })
+
+
+
+
+
+  </script>
+</body>
+</html>
