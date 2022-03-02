@@ -18,7 +18,7 @@ console.log(customer2);
 customer2['lastName'] = 'Silva';
 console.log(customer2); */
 
- const customer = {
+ let customer = {
   firstName: 'Roberto',
   age: 22,
   job: 'Teacher',
@@ -32,6 +32,14 @@ const fullName = `${customer.firstName} ${customer.lastName}`;
 customer[newKey] = fullName;
 console.log(customer); */
 
-customer.lastName = 'ferraz';
+/* customer.lastName = 'ferraz';
 customer.fullName = `${customer.firstName} ${customer.lastName}`;
-console.log(customer);
+console.log(customer); */
+
+const AddKeys = (objeto, chave, valor) => {
+  objeto[chave] = valor
+  console.log(objeto)
+}
+
+AddKeys(customer, 'lastName', 'testando');
+AddKeys(customer, 'Naturalidade', 'São Gonçalo');
