@@ -32,16 +32,16 @@ const damegeWarrior = () => {
   return dano;
 };
 
-const damegeMage = () => {
-  const mana = mage.mana;
+const damegeMage = (rodada) => {
+  const mana = mage.mana - (15 * rodada) ;
   const minimo = mage.intelligence;
   const maximo = minimo * 2;
-  const manaState = { dano: 'Não possui mana suficiente', mana: 0 };
+  const manaState = { dano: 'Não possui mana suficiente', mana: mana };
 
   if (mana > 15 ) {
-    const dano =  Math.floor(Math.random()* (maximo - minimo +1)) + minimo;  
-    manaState.mana = mana - 15;
+    const dano =  Math.floor(Math.random() * (maximo - minimo +1)) + minimo;  
     manaState.dano = dano;
+    manaState.mana = mana
   }
  
  return manaState;
