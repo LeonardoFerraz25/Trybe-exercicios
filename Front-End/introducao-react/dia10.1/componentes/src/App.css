@@ -1,0 +1,25 @@
+.header {
+  background-color: black;
+  color: white;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.conteudo {
+  border: 1px solid;
+  width: 80%;
+  margin: auto;
+}
+
+.info {
+  display: none;
+}
+
+.materia:hover  {
+  background-color: cadetblue;
+}
+
+.aulas:hover .info{
+  display: block;
+}
